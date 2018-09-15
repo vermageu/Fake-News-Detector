@@ -82,6 +82,5 @@ skplt.metrics.plot_confusion_matrix(true_label,pred_label,labels=labels, normali
 
 
 
-
 from sklearn.metrics import classification_report
 print(classification_report(Y_test,pred))
