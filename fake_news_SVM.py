@@ -34,6 +34,7 @@ vect=CountVectorizer()
 X_data=vect.fit_transform(x.values.astype('U')).todense()
 X_data.shape
 print(X_data)
+
 from sklearn.model_selection import train_test_split
 X_train,X_test,Y_train,Y_test=train_test_split(X_data,y,random_state=1,test_size=0.20)
 print (X_train.shape)
@@ -47,6 +48,7 @@ pred = model.predict(X_test)
 from sklearn.metrics import accuracy_score
 print("Accuracy Score : ",accuracy_score(pred,Y_test)*100)
 import scikitplot as skplt
+
 true_label=Y_test.map({
     1:'bias',
     2:'conspiracy',
